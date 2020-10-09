@@ -40,7 +40,7 @@
                 android:layout_marginEnd="16dp"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="Nama Barang"
+                android:hint="Nama Barang"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -54,7 +54,7 @@
                 android:layout_marginEnd="16dp"
                 android:ems="10"
                 android:inputType="number"
-                android:text="Harga Barang"
+                android:hint="Harga Barang"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editNamaBrg" />
@@ -68,7 +68,7 @@
                 android:layout_marginEnd="16dp"
                 android:ems="10"
                 android:inputType="number"
-                android:text="Jumlah Barang"
+                android:hint="Jumlah Barang"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editHargaBrg" />
@@ -109,7 +109,7 @@
                 android:layout_marginEnd="16dp"
                 android:ems="10"
                 android:inputType="number"
-                android:text="Bayar"
+                android:hint="Bayar"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtTotal" />
