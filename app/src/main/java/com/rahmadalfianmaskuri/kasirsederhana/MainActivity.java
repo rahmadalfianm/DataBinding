@@ -27,6 +27,17 @@ public class MainActivity extends AppCompatActivity {
                 binding.txtTotal.setText(String.valueOf(total));
             }
         });
+        binding.btnHasil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                double bayar = Double.parseDouble(kasir.setBayar(binding.editBayar.getText().toString().trim()));
+                double tt = Double.parseDouble(binding.txtTotal.getText().toString().trim());
+                double kembalian = bayar - tt;
+                binding.txtKembalian.setText(String.valueOf(kembalian));
+            }
+        });
+
 
     }
 }

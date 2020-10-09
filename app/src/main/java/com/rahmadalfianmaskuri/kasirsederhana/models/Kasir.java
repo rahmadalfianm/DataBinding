@@ -59,8 +59,9 @@ public class Kasir implements Parcelable {
         return bayar;
     }
 
-    public void setBayar(String bayar) {
-        this.bayar = bayar;
+    public String setBayar(String bayar) {
+
+        return this.bayar = bayar;
     }
 
     public String getKembalian() {
