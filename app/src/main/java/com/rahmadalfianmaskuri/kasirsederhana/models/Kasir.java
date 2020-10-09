@@ -35,24 +35,24 @@ public class Kasir implements Parcelable {
         return hargaBarang;
     }
 
-    public void setHargaBarang(String hargaBarang) {
-        this.hargaBarang = hargaBarang;
+    public String setHargaBarang(String hargaBarang) {
+        return this.hargaBarang = hargaBarang;
     }
 
     public String getJumlahBarang(String s) {
         return jumlahBarang;
     }
 
-    public void setJumlahBarang(String jumlahBarang) {
-        this.jumlahBarang = jumlahBarang;
+    public String setJumlahBarang(String jumlahBarang) {
+        return this.jumlahBarang = jumlahBarang;
     }
 
     public String getTotal() {
         return total;
     }
 
-    public void setTotal(String total) {
-        this.total = total;
+    public String  setTotal(String total) {
+        return this.total = total;
     }
 
     public String getBayar() {

@@ -21,11 +21,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 double hrgBrg;
                 double total;
-                double jmlBrg = Double.parseDouble(kasir.getJumlahBarang(binding.editJmlBrg.getText().toString().trim());
-                hrgBrg = Double.parseDouble(kasir.getHargaBarang(binding.editHargaBrg.getText().toString().trim()));
+                double jmlBrg = Double.parseDouble(kasir.setJumlahBarang(binding.editJmlBrg.getText().toString().trim()));
+                hrgBrg = Double.parseDouble(kasir.setHargaBarang(binding.editHargaBrg.getText().toString().trim()));
                 total  = jmlBrg * hrgBrg;
-                binding.txtTotal.setText((int) total);
+                binding.txtTotal.setText(String.valueOf(total));
             }
         });
+
     }
 }
