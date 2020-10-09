@@ -41,14 +41,20 @@ public class MainActivity extends AppCompatActivity {
         binding.btnTampil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                kasir.setNamaBarang(binding.editNamaBrg.getText().toString());
+                kasir.setHargaBarang(binding.editHargaBrg.getText().toString());
+                kasir.setJumlahBarang(binding.editJmlBrg.getText().toString());
+                kasir.setBayar(binding.editBayar.getText().toString());
+                kasir.setKembalian(binding.txtKembalian.getText().toString());
+                kasir.setTotal(binding.txtTotal.getText().toString());
+                Intent intent = new Intent(getApplicationContext(),DetailActivity.class);
+                // put mahasiswa object to extra
+                intent.putExtra("KASIR",kasir);
+                startActivity(intent);
+
 
             }
         });
-        Intent intent = new Intent(getApplicationContext(),DetailActivity.class);
-        // put mahasiswa object to extra
-        intent.putExtra("KASIR", kasir);
-
-        startActivity(intent);
 
 
     }

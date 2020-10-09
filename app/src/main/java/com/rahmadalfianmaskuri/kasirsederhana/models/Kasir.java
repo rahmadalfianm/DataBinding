@@ -31,7 +31,7 @@ public class Kasir implements Parcelable {
         this.namaBarang = namaBarang;
     }
 
-    public String getHargaBarang(String s) {
+    public String getHargaBarang() {
         return hargaBarang;
     }
 
@@ -39,7 +39,7 @@ public class Kasir implements Parcelable {
         return this.hargaBarang = hargaBarang;
     }
 
-    public String getJumlahBarang(String s) {
+    public String getJumlahBarang() {
         return jumlahBarang;
     }
 
