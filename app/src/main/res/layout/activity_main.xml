@@ -4,6 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <variable
+            name="kasir"
+            type="com.rahmadalfianmaskuri.kasirsederhana.models.Kasir" />
 
     </data>
 

@@ -3,6 +3,7 @@ package com.rahmadalfianmaskuri.kasirsederhana;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -37,6 +38,17 @@ public class MainActivity extends AppCompatActivity {
                 binding.txtKembalian.setText(String.valueOf(kembalian));
             }
         });
+        binding.btnTampil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        Intent intent = new Intent(getApplicationContext(),DetailActivity.class);
+        // put mahasiswa object to extra
+        intent.putExtra("KASIR", kasir);
+
+        startActivity(intent);
 
 
     }
