@@ -34,19 +34,19 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <EditText
-                android:id="@+id/editNamaBrg"
+
+            <Spinner
+                android:id="@+id/spinnerNama"
                 android:layout_width="385dp"
                 android:layout_height="44dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:hint="Nama Barang"
+                android:entries="@array/namaBarang"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"></Spinner>
 
             <EditText
                 android:id="@+id/editHargaBrg"
@@ -60,7 +60,7 @@
                 android:hint="Harga Barang"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editNamaBrg" />
+                app:layout_constraintTop_toBottomOf="@+id/spinnerNama" />
 
             <EditText
                 android:id="@+id/editJmlBrg"

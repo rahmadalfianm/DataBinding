@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">KasirSederhana</string>
+    <string-array name="namaBarang">
+        <item>Underbone NUI Monster</item>
+        <item>Master Rem Brembo</item>
+        <item>Stang B-pro Racing</item>
+        <item>Frame Slider WR-3</item>
+        <item>Proliner Exhaust Full System</item>
+    </string-array>
 </resources>

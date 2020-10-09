@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         binding.btnTampil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                kasir.setNamaBarang(binding.editNamaBrg.getText().toString());
+                kasir.setNamaBarang(binding.spinnerNama.getSelectedItem().toString());
                 kasir.setHargaBarang(binding.editHargaBrg.getText().toString());
                 kasir.setJumlahBarang(binding.editJmlBrg.getText().toString());
                 kasir.setBayar(binding.editBayar.getText().toString());
@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
 
 
     }
