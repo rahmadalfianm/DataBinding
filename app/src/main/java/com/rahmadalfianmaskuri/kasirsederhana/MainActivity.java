@@ -55,7 +55,16 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
+        binding.btnClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                binding.editHargaBrg.setText("");
+                binding.editJmlBrg.setText("");
+                binding.editBayar.setText("");
+                binding.txtTotal.setText("");
+                binding.txtKembalian.setText("");
+            }
+        });
 
 
     }
