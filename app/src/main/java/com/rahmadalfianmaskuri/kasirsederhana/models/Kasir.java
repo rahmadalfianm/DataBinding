@@ -1,5 +1,6 @@
 package com.rahmadalfianmaskuri.kasirsederhana.models;
 
+
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -10,17 +11,22 @@ public class Kasir implements Parcelable {
     private String total;
     private String bayar;
     private String kembalian;
+    private String metodeBayar;
+    private String bank;
 
     public Kasir() {
     }
 
-    public Kasir(String namaBarang, String hargaBarang, String jumlahBarang, String total, String bayar, String kembalian) {
+    public Kasir(String namaBarang, String hargaBarang, String jumlahBarang, String total, String bayar, String kembalian,
+                 String metodeBayar, String bank) {
         this.namaBarang = namaBarang;
         this.hargaBarang = hargaBarang;
         this.jumlahBarang = jumlahBarang;
         this.total = total;
         this.bayar = bayar;
         this.kembalian = kembalian;
+        this.metodeBayar = metodeBayar;
+        this.bank = bank;
     }
 
     public String getNamaBarang() {
@@ -72,6 +78,21 @@ public class Kasir implements Parcelable {
         this.kembalian = kembalian;
     }
 
+    public String getMetodeBayar() {
+        return metodeBayar;
+    }
+
+    public void setMetodeBayar(String metodeBayar) {
+        this.metodeBayar = metodeBayar;
+    }
+
+    public String getBank() {
+        return bank;
+    }
+
+    public void setBank(String bank) {
+        this.bank = bank;
+    }
 
     @Override
     public int describeContents() {
@@ -86,6 +107,8 @@ public class Kasir implements Parcelable {
         dest.writeString(this.total);
         dest.writeString(this.bayar);
         dest.writeString(this.kembalian);
+        dest.writeString(this.metodeBayar);
+        dest.writeString(this.bank);
     }
 
     protected Kasir(Parcel in) {
@@ -95,9 +118,11 @@ public class Kasir implements Parcelable {
         this.total = in.readString();
         this.bayar = in.readString();
         this.kembalian = in.readString();
+        this.metodeBayar = in.readString();
+        this.bank = in.readString();
     }
 
-    public static final Parcelable.Creator<Kasir> CREATOR = new Parcelable.Creator<Kasir>() {
+    public static final Creator<Kasir> CREATOR = new Creator<Kasir>() {
         @Override
         public Kasir createFromParcel(Parcel source) {
             return new Kasir(source);
@@ -109,3 +134,4 @@ public class Kasir implements Parcelable {
         }
     };
 }
+

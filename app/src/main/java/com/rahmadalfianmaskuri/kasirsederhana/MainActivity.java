@@ -6,6 +6,7 @@ import androidx.databinding.DataBindingUtil;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CompoundButton;
 
 import com.rahmadalfianmaskuri.kasirsederhana.databinding.ActivityMainBinding;
 import com.rahmadalfianmaskuri.kasirsederhana.models.Kasir;
@@ -16,6 +17,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         final ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         kasir = new Kasir();
+
+        binding.radioCash.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(b){
+                    kasir.setMetodeBayar("Cash");
+                }
+            }
+        });
+        binding.radioDebit.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(b){
+                    kasir.setMetodeBayar("Debit");
+                }
+            }
+        });
 
         binding.btnTotal.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
                 kasir.setBayar(binding.editBayar.getText().toString());
                 kasir.setKembalian(binding.txtKembalian.getText().toString());
                 kasir.setTotal(binding.txtTotal.getText().toString());
+                kasir.setBank(binding.spinnerBank.getSelectedItem().toString());
                 Intent intent = new Intent(getApplicationContext(),DetailActivity.class);
                 // put mahasiswa object to extra
                 intent.putExtra("KASIR",kasir);
